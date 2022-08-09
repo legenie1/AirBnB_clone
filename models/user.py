@@ -1,21 +1,17 @@
 #!/usr/bin/python3
 """
-Defines the User class.
+class user the best important
 """
 from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """Represent a User
-
-    Attributes:
-        email (str): user email
-        password (str): user password
-        first_name (str): first name
-        last_name (str): last name
-
-    """
+    """inheritated class User from BaseModel"""
     email = ""
     password = ""
     first_name = ""
     last_name = ""
+
+    def __init__(self, *args, **kwargs):
+        """the init constructor"""
+        super().__init__(**kwargs)
